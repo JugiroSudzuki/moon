@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+	.fon{
+		background-image: url(1.jpg);
+		background-size: 100% 100%;
+		width: 1900px;
+		height: 950px;
+	}
+	.tsbl{
+		background-color: orange;
+		width: 200px;
+		height: 400px;
+	}
+	.moon{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		left: 750px;
+		top: 30px;
+	}
+	.bat{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		left: 1700px;
+		top: 230px;
+	}
+	.win{
+		background-image: url(win.jpg);
+		width: 300px;
+		height: 300px;
+		display: none;
+		margin-left: auto;
+		margin-top: auto;
+		margin-right: auto;
+		margin-bottom: auto;
+		background-size: 100% 100%;
+	}
+	</style>
+	<div class="fon">
+		<div class="tsbl">
+			<h1>Найди:</h1>
+			<h2 class="text">1. Луна</h2>
+			<h2 class="text">2. Летучая мышь</h2>
+			<h1 >Очки: <span class="score"></span></h1>
+		</div>
+		<div class="">
+			<img src="moon3.png" class="moon">
+		</div>
+		<div>
+			<img src="bat.png" class="bat">
+		</div>
+		
+	</div>
+<div class="win"></div>
+
+
+<script type="text/javascript">
+	let number = 0;
+		document.querySelector('.score').innerHTML = number;
+		document.querySelector('.moon').onclick = function(){
+			number = number +1;
+			document.querySelector('.moon').style.display = 'none';
+			document.querySelector('.score').innerHTML = number;
+			if (number == 2){
+				document.querySelector('.win').style.display = 'block';
+				document.querySelector('.fon').style.display = 'none';
+				document.querySelector('.tsbl').style.display = 'none';
+			}
+		}
+		document.querySelector('.bat').onclick = function(){
+			number = number +1;
+			document.querySelector('.bat').style.display = 'none';
+			document.querySelector('.score').innerHTML = number;
+			if (number == 2){
+				document.querySelector('.win').style.display = 'block';
+				document.querySelector('.fon').style.display = 'none';
+				document.querySelector('.tsbl').style.display = 'none';
+			}
+		}
+		document.querySelector('.text')
+</script>
+</body>
+</html>
